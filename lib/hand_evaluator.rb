@@ -173,8 +173,8 @@ class HandEvaluator
 			#A card representing the tree of a kind will always be in position 2 of the array so we use as a kicker for other three of a kind
 			return value[2].to_i 
 		elsif hasTwoPairs(value)
-			#The card in the position 3 of the array will always be the kicker by default?????????
-			return value[3].to_i + value[0].to_i
+			#The card in the position 3 + the position in 1 will determine which of the two pairs are higher
+			return value[3].to_i + value[1].to_i
 		elsif hasPair(value) 
 			#The pair with the greates card wins
 			return value[4].to_i
